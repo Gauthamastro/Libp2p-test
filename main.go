@@ -38,8 +38,8 @@ func main() {
 		libp2p.Identity(priv),
 		// Multiple listen addresses
 		libp2p.ListenAddrStrings(
-			"/ip4/0.0.0.0/tcp/54000", // regular tcp connections
-			//"/ip4/0.0.0.0/udp/51000/quic", // a UDP endpoint for the QUIC transport
+			//"/ip4/0.0.0.0/tcp/54000", // regular tcp connections
+			"/ip4/0.0.0.0/udp/51000/quic", // a UDP endpoint for the QUIC transport
 		),
 		// support TLS connections
 		libp2p.Security(libp2ptls.ID, libp2ptls.New),
